@@ -66,12 +66,12 @@ This project demonstrates my ability to:
 
 ## Example Commands
 
-### Disable Windows Firewall (PowerShell)
+### Disable Windows Firewall (PowerShell or via SSM)
 ```powershell
 Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
 ```
 
-### Enable Windows Firewall (PowerShell)
+### Enable Windows Firewall (PowerShell or via SSM)
 
 ```powershell
 Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled True
