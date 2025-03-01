@@ -23,18 +23,17 @@ This project involves setting up a vulnerable EC2 instance on AWS, identifying s
 ### 1. Launch an EC2 Instance
 - Log in to the AWS Management Console.
 - Navigate to EC2 and launch a Windows-based instance.
-- Ensure the instance is publicly accessible for testing purposes.
 
 ### 2. Introduce Vulnerabilities
-- Connect to the instance via RDP.
+- Connect to the instance via RDP or SSM Fleet Manager
 - Download and install outdated versions of software (e.g., Google Chrome, Zoom).
 - Disable the Windows Firewall:
   - Open `Control Panel` > `System and Security` > `Windows Defender Firewall`.
   - Turn off the firewall for both private and public networks.
 
 ### 3. Perform a Nessus Scan
-- Install Nessus on a separate machine or use a cloud-based Nessus solution.
-- Configure Nessus to scan the EC2 instance's public IP address.
+- Install Nessus on the EC2 (I installed a trial version which is free to use for 7 days).
+- Configure Nessus to scan the EC2 instance.
 - Run the scan and review the results to identify vulnerabilities.
 
 ### 4. Remediate Vulnerabilities
@@ -77,7 +76,7 @@ Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
 Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled True
 ```
 ## Update Software
-- Manually download and install the latest versions of software like Google Chrome and Zoom from their official websites.
+- Manually download and install the latest versions of software like Google Chrome and Zoom from their official websites as well as utilize Windows Update to fetch the latest KB's.
 
 ### Conclusion
 
